@@ -44,7 +44,7 @@ Serve different images based on device at client,
 | Tablet            | 481                | 768                    |
 | Phone             | 769                | Screen available width |
 
-```javascripe
+```javascript
 var viewportWidth = window.innerWidth, 
   elements = document.getElementsByClassName("ri");
  
