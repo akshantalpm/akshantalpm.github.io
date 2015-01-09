@@ -2,7 +2,7 @@
 layout: post
 title: Responsive Image Handling
 ---
-<script src="https://gist.github.com/kkosuge/2325414.js"></script>
+<link rel="stylesheet" href="https://gist-assets.github.com/assets/embed-b67021dc07195830cc157f7720b938fb.css">
 
 A famous Russian writer Ivan Turgenev wrote, "A picture shows me at a glance what it takes dozens of pages of a book to expound."
 This is exactly the same trend that can be seen in current websites. Pictures and visuals overpower the text on these websites.
