@@ -1,10 +1,40 @@
 ---
 layout: post
-title: You're up and running!
+title: Responsive Image Handling
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below :point_down:).
+A famous Russian writer Ivan Turgenev wrote, "A picture shows me at a glance what it takes dozens of pages of a book to expound."
+This is exactly the same trend that can be seen in current websites. Pictures and visuals overpower the text on these websites.
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+But, this comes at a cost.
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+![_config.yml]({{ site.baseurl }}/images/ri-before.png) ![_config.yml]({{ site.baseurl }}/images/ri-after.png)
+
+Responsive design is getting more attraction with more and more users visiting websites for mobile devices. However, loading high quality image for high resolution display and serving lower size image for low bandwidth is equally important.
+
+"Responsive Images" deals with serving different images based on parameters like devices, resolution and viewports.
+
+“Art direction” problem:
+It is not always acceptable to serve same image with different resolutions based on device type. Some images don’t scale well, focus can be lost
+
+![_config.yml]({{ site.baseurl }}/images/ri-before.png)
+
+In the above image, it would be much nicer visually if the mobile version of the photo was zoomed in, cropped and focused on our happy family. To solve this problem, we need a responsive image solution that enables you either to specify different versions of the image for different situations or to adjust the image on the fly.
+
+![_config.yml]({{ site.baseurl }}/images/ri-after.png)
+
+Bandwidth detection problem:
+Check the bandwidth of user and server different quality of images for low, medium and high bandwidth.
+
+Performance problem:
+Load images only for the visible viewport and on scroll load more images.
+
+Serve different images based on device at client,
+·  	Breakpoint is based on the device width and is used for targeting devices e.g. desktop, tablet and phone
+·  	Breakpoint gets selected depending on the size of viewport (It is the part of the webpage that user can currently see)
+
+Generate different size and resolution images on server side
+
+Server side solution uses visitors screen-size for rescaling images, embedded on the page being served. No markup changes are required, it works on legacy website. You can keep high resolution image on server and can serve the same image with different resolution or even crop the image to solve art-direction problem, multiple copies of same image are no longer needed.
+
+
