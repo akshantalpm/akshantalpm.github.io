@@ -8,7 +8,7 @@ This is exactly the same trend that can be seen in current websites. Pictures an
 
 But, this comes at a cost.
 
-![_config.yml]({{ site.baseurl }}/images/ri-before.png) ![_config.yml]({{ site.baseurl }}/images/ri-after.png)
+![_config.yml]({{ site.baseurl }}/images/ri-before.jpg) ![_config.yml]({{ site.baseurl }}/images/ri-after.png)
 
 Responsive design is getting more attraction with more and more users visiting websites for mobile devices. However, loading high quality image for high resolution display and serving lower size image for low bandwidth is equally important.
 
@@ -17,7 +17,7 @@ Responsive design is getting more attraction with more and more users visiting w
 “Art direction” problem:
 It is not always acceptable to serve same image with different resolutions based on device type. Some images don’t scale well, focus can be lost
 
-![_config.yml]({{ site.baseurl }}/images/ri-before.png)
+![_config.yml]({{ site.baseurl }}/images/ri-before.jpg)
 
 In the above image, it would be much nicer visually if the mobile version of the photo was zoomed in, cropped and focused on our happy family. To solve this problem, we need a responsive image solution that enables you either to specify different versions of the image for different situations or to adjust the image on the fly.
 
