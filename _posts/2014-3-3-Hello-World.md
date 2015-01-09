@@ -14,7 +14,8 @@ Responsive design is getting more attraction with more and more users visiting w
 
 "Responsive Images" deals with serving different images based on parameters like devices, resolution and viewports.
 
-“Art direction” problem:
+1. “Art direction” problem:
+------------------------
 It is not always acceptable to serve same image with different resolutions based on device type. Some images don’t scale well, focus can be lost
 
 ![_config.yml]({{ site.baseurl }}/images/ri-before.jpg)
@@ -23,18 +24,27 @@ In the above image, it would be much nicer visually if the mobile version of the
 
 ![_config.yml]({{ site.baseurl }}/images/ri-after.png)
 
-Bandwidth detection problem:
+2. Bandwidth detection problem:
+----------------------------
 Check the bandwidth of user and server different quality of images for low, medium and high bandwidth.
 
-Performance problem:
+3. Performance problem:
+--------------------
 Load images only for the visible viewport and on scroll load more images.
 
 Serve different images based on device at client,
-·  	Breakpoint is based on the device width and is used for targeting devices e.g. desktop, tablet and phone
-·  	Breakpoint gets selected depending on the size of viewport (It is the part of the webpage that user can currently see)
+------------------------------------------------
+* Breakpoint is based on the device width and is used for targeting devices e.g. desktop, tablet and phone
+* Breakpoint gets selected depending on the size of viewport (It is the part of the webpage that user can currently see)
+
+| Breakpoint        | MinWidth           | MaxWidth               |
+| ----------------  |:------------------:| ----------------------:|
+| Desktop           | 0                  | 480                    |
+| Tablet            | 481                | 768                    |
+| Phone             | 769                | Screen available width |
 
 Generate different size and resolution images on server side
-
+------------------------------------------------------------
 Server side solution uses visitors screen-size for rescaling images, embedded on the page being served. No markup changes are required, it works on legacy website. You can keep high resolution image on server and can serve the same image with different resolution or even crop the image to solve art-direction problem, multiple copies of same image are no longer needed.
 
 
