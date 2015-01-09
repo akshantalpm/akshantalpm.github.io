@@ -44,7 +44,7 @@ Serve different images based on device at client,
 | Tablet            | 481                | 768                    |
 | Phone             | 769                | Screen available width |
 
-```javascript
+{% highlight javascript %}
 var viewportWidth = window.innerWidth, 
   elements = document.getElementsByClassName("ri");
  
@@ -54,7 +54,7 @@ for (index = 0, length = elements.length; index < length; ++index) {
   var imgUrl = img.data("src-" + breakpointName);
   img.src = imgUrl
 }
-```
+{% endhighlight %}
 
 <script src="https://gist.github.com/akshantalpm/5c9dc9986ab7d60f271b.js"></script>
 
