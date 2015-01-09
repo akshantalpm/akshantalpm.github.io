@@ -38,7 +38,7 @@ Serve different images based on device at client,
 * Breakpoint gets selected depending on the size of viewport (It is the part of the webpage that user can currently see)
 
 | Breakpoint        | MinWidth           | MaxWidth               |
-| ----------------  |:------------------:| ----------------------:|
+| ------------------|--------------------|------------------------|
 | Desktop           | 0                  | 480                    |
 | Tablet            | 481                | 768                    |
 | Phone             | 769                | Screen available width |
