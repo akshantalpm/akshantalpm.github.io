@@ -43,6 +43,12 @@ Serve different images based on device at client,
 | Tablet            | 481                | 768                    |
 | Phone             | 769                | Screen available width |
 
+<script src="https://gist.github.com/akshantalpm/69b4f4432af01c784a27.js"></script>
+
+<script src="https://gist.github.com/akshantalpm/5c9dc9986ab7d60f271b.js"></script>
+
+<script src="https://gist.github.com/akshantalpm/4ba48944224d155588cd.js"></script>
+
 Generate different size and resolution images on server side
 ------------------------------------------------------------
 Server side solution uses visitors screen-size for rescaling images, embedded on the page being served. No markup changes are required, it works on legacy website. You can keep high resolution image on server and can serve the same image with different resolution or even crop the image to solve art-direction problem, multiple copies of same image are no longer needed.
