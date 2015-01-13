@@ -21,7 +21,11 @@ Responsive design is getting more attraction with more and more users visiting w
 
 "Responsive Images" deals with serving different images based on parameters like devices, resolution and viewports.
 
-### 1. “Art direction” problem:
+--------------
+
+## Challenges:
+
+* ### “Art direction” problem:
 
 It is not always acceptable to serve same image with different resolutions based on device type. Some images don’t scale well, focus can be lost
 
@@ -32,62 +36,71 @@ In order to be able to appreciate the bird's beautiful characteristics on mobile
 
 ![Responsive Image]({{ site.baseurl }}/images/art-direction-after.jpg)
 
-------------------------------
-
-### 2. Bandwidth detection problem:
+* ### Bandwidth detection problem:
 
 Check the bandwidth of user and server different quality of images for low, medium and high bandwidth.
 
-------------------------------
+* ### Performance problem:
 
-### 3. Performance problem:
+One way to improve performance is by lazy loading of images. Load images within the viewport and images outside the viewport will not be loaded until user scrolls to them.
+<b>unveil.js</b> exactly does the same thing
 
-Load images only for the visible viewport and on scroll load more images.
+----------------
 
-------------------------------
+## Solutions:
+* ### Client-side
 
-###  Client-side approach for serving different size and resolution images
-
-Image will be selected from a set of images according to the breakpoint and bandwidth. Breakpoint is based on the device width and is used for targeting devices e.g. desktop, tablet and phone.
-
-
-<div class="breakpoints"></div>
-
-| Breakpoint        | MinWidth           | MaxWidth               |
-| ------------------|--------------------|------------------------|
-| Phone             | 0                  | 480                    |
-| Tablet            | 481                | 768                    |
-| Desktop           | 769                | Screen available width |
-
-As shown below, we can have image for each breakpoint and select one accordingly
-{% gist 5c9dc9986ab7d60f271b %}
-
-To solve the art direction problem, image can be cropped and shown
-{% gist 4ba48944224d155588cd %}
-
-Below is the javascript snippet that scans image tags and selects the url according to the breakpoint and assigns it to src attribute of img tag
-{% gist 69b4f4432af01c784a27 %}
-
-Performance problem can be solved by doing a speed-test and storing that information in cookie/localstorage which can then be used before requesting any image
+  Image will be selected from a set of images according to the breakpoint and bandwidth. Breakpoint is based on the device width and is used for targeting devices e.g. desktop, tablet and phone.
 
 
-###  Server-side approach for serving different size and resolution images
-------------------------------------------------------------
-Server side solution uses visitors screen-size for rescaling images which are embedded on the page being served.
+  <div class="breakpoints"></div>
 
-Visitors screen-size information can be stored in a cookie/localstorage on start of page-load and this information can be used at the time image is requested.
+  | Breakpoint        | MinWidth           | MaxWidth               |
+  | ------------------|--------------------|------------------------|
+  | Phone             | 0                  | 480                    |
+  | Tablet            | 481                | 768                    |
+  | Desktop           | 769                | Screen available width |
 
-No markup changes are required, it works on legacy website. Added advantage of using server-side solution is of maintaining only one image file.
+  As shown below, we can have image for each breakpoint and select one accordingly
+  {% gist 5c9dc9986ab7d60f271b %}
 
-The disadvantage with this solution is images which are not in viewport will also be loaded at the time of page load, resulting into delaying page load.
+  To solve the art direction problem, image can be cropped and shown
+  {% gist 4ba48944224d155588cd %}
 
-### Prototype:
---------------
+  Below is the javascript snippet that scans image tags and selects the url according to the breakpoint and assigns it to src attribute of img tag
+  {% gist 69b4f4432af01c784a27 %}
 
-To solve the above problem, below is the prototype of client-side approach
- 
-View source on Github: [https://github.com/akshantalpm/responsive-image-handling](https://github.com/akshantalpm/responsive-image-handling)
+  Performance problem can be solved by doing a speed-test and storing that information in cookie/localstorage which can then be used before requesting any image
 
+  Following are the existing client-side solutions:
 
+    * [HiSrc](https://github.com/teleject/hisrc)
+    * [Picturefill](https://github.com/scottjehl/picturefill)
+    * [rwd.images.js](https://github.com/stowball/rwd.images.js)
 
+  Apart from above mentioned solutions, I have created a prototype for the same,
 
+  View source on Github: [https://github.com/akshantalpm/responsive-image-handling](https://github.com/akshantalpm/responsive-image-handling)
+
+* ### Server-side
+
+  Server side solution uses visitors screen-size for rescaling images which are embedded on the page being served.
+
+  Visitors screen-size information can be stored in a cookie/localstorage on start of page-load and this information can be used at the time image is requested.
+
+  No markup changes are required, it works on legacy website. Added advantage of using server-side solution is of maintaining only one image file.
+
+  The disadvantage with this solution is images which are not in viewport will also be loaded at the time of page load, resulting into delaying page load.
+
+  Following are the existing server-side solutions:
+
+    * open-source solutions:
+      * [Pilbox by agschwender](https://github.com/agschwender/pilbox)
+      * [sydneystockholm/imgr](https://github.com/sydneystockholm/imgr)
+      * [Adaptive Images by MattWilCox](https://github.com/MattWilcox/Adaptive-Images)
+
+    * SaaS solutions:
+      * [Adobe Scene7](http://www.adobe.com/in/solutions/web-experience-management/scene7.html)
+      * [Cloudinary](http://cloudinary.com/)
+      * [http://www.cdnconnect.com/](http://www.cdnconnect.com/)
+      * [ReSrc.it](http://www.resrc.it/)
