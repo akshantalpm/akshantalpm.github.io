@@ -20,8 +20,31 @@ code {
   font-size: 14px;
   color: #999
 }
- 
-// Solarized Light Pygments 
+
+.breakpoints {
+  & + table {
+    margin: 4px;
+    margin-bottom: 20px;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    border-width: 1px;
+    padding: 3px 20px;
+  }
+  & + table th {
+    border-bottom-style: dashed;
+    text-align: left;
+  }
+  & + table {
+    tr, td, th {
+      border-width: 1px;
+      border-right-style: dashed;
+      margin: 4px;
+      padding: 3px 20px;
+    }
+  }
+}
+
+// Solarized Light Pygments
 // Thanks https://gist.github.com/edwardhotchkiss/2005058
 /* Comment */
 .highlight .c, .highlight .c1 { color: #586E75 }
