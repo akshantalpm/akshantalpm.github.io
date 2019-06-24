@@ -6,7 +6,7 @@ title: Actor Model For IoT
 
 The Internet of Things (IoT) is composed of many nodes, often with limited capabilities. Small software components communicating via Internet protocol standards typically form a highly distributed workflow among machines with minimal human interaction. General application scenarios include sensors that monitors data such as environmental conditions. Complex applications are built using sensors and actuators, for example: home automation, and tracking of health data. These systems enable machines to upload data to Internet servers. Thus, they allow the tracking of data everywhere and anytime.
 
-![Actor Model For IoT Image]({{ site.baseurl }}/images/actor-model-for-iot.png)
+![Actor Model For IoT Image]({{ site.baseurl }}/images/iot-with-actors.png)
 
 One of the main characteristics of a typical IoT system is that it involves a large number of managed devices, each of which consists of changing internal state. In many cases, these devices are primitive hardware running on some simple network protocol. Such "minimalist" requirements align well with the actor model in which breaking down business logic into minimal tasks for individual actors to handle is part of the model's underlying principle.
 
