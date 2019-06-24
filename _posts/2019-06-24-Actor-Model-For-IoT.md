@@ -56,8 +56,6 @@ The Internet of Things adds a lot of challenges in how to deal with all the simu
 
     <script src="https://gist.github.com/akshantalpm/b0088ca0582333bbd3a22af6e52735f8.js"></script>
     
-   ![Actor Model For IoT Image]({{ site.baseurl }}/images/customization.png)
-
    The above snippet shows how one might construct a device actor in Scala/Akka that publishes its operational state information to subscribers using the industry standard MQTT (Message Queue Telemetry Transport) publish-subscribe messaging protocol. The intent here isn't to study how to program in Scala or Akka, but to provide a simple example of an Akka actor's easy-to-understand logic flow.
 
 --------------
