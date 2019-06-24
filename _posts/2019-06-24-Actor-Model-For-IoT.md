@@ -100,4 +100,4 @@ The Internet of Things adds a lot of challenges in how to deal with all the simu
 ----------------
 
 ## References:
-* https://readwrite.com/2014/07/10/akka-jonas-boner-concurrency-distributed-computing-internet-of-things/
+* <https://readwrite.com/2014/07/10/akka-jonas-boner-concurrency-distributed-computing-internet-of-things/>
