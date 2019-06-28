@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modular Monolith - A step towards Microservice
+title: Modular Monolith - A Step Towards Microservice
 ---
 <link rel="stylesheet" href="https://gist-assets.github.com/assets/embed-b67021dc07195830cc157f7720b938fb.css">
 
