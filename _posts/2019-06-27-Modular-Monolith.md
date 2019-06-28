@@ -19,6 +19,9 @@ Modularity in software development can be boiled down into three guiding princip
 * Well-defined interfaces: well-defined and stable APIs between components are a must. A component can be replaced by any implementation that conforms to the interface specification.
 * Explicit dependencies: having a modular system means distinct components must work together. You'd better have a good way of expressing (and verifying) their relationships.
 
+Each module created in the application has it's own domain models and database tables which makes it absolutely independent of the other modules and it hides the details of the internal implementation.
+If you share the models or tables then you are coupling your modules and will loose the greatest benefit of teams working on them independently without worrying about how other module evolves. 
+
 Modules are now part of the programming languages and platforms as a first-class construct. Even the Java platform itself has been modularized using the new Java module system. Many module systems allow you to express your dependencies on other modules. When these dependencies are violated, the module system will not allow it.
 
 ---------------
@@ -40,7 +43,7 @@ After creating new play project called **e-commerce** the project will have foll
 ```
 Any e-commerce application has standard features like payment, search, reviews-ratings, etc. We can develop them as different modules.
 The common code required for different modules can be extracted as a library.
-Module can either be a Play project or a simple sbt project depending on your requirement.  
+Module can either be a Play project or a simple sbt project depending on your requirement. 
 
 ```
  e-commerce
