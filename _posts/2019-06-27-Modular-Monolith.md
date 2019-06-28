@@ -4,11 +4,33 @@ title: Modular Monolith - A Step Towards Microservice
 ---
 <link rel="stylesheet" href="https://gist-assets.github.com/assets/embed-b67021dc07195830cc157f7720b938fb.css">
 
+Let’s start with Monolithic Architectures, a traditional way of designing systems/applications. In software engineering, a monolithic application describes a software application which is designed without modularity, tightly coupled application. A single tier application which contains code for User Interface, Business Logic, Database Access, External Integrations, etc. All business domain residing in one single repository.
+
+Monolith applications are simple to develop, deploy and test but it also comes up with drawbacks. Some of them are
+* Maintenance — If Application is too large and complex to understand entirely, it is challenging to make changes fast and correctly.
+* Scaling - Monolithic applications can also be challenging to scale when different modules have conflicting resource requirements.
+* Adaption to new technologies - Monolithic applications have difficulty to adopting new and advance technologies. Since changes in languages or frameworks affect an entire application.
+
+When monolithic applications become unmaintainable, organisations see Microservices as a silver bullet. And that is a problem.
+
 Today Microservices are everywhere. It’s an architectural style that structures an application as a collection of services that are organized around business capabilities, independently deployable, loosely coupled and easily scalable.
 
-One of the biggest challenges while designing microservice is identifying the boundaries, right set of bounded context. Even experienced architects with good domain knowledge have difficulty in identifying boundaries at the beginning. Choosing microservice boundaries is an architecturally significant decision with costly ramifications when done wrong. Where as Module boundaries in a modular application are easier to change. Refactoring across modules is typically supported by the type-system and the compiler. Modular monolith helps you figure out the right set of boundaries and acts as a gateway towards microservice architecture.
+With enumerate advantage of using microservices there are also few drawbacks, one of them being deployment.  Deploying one monolith is very different from deploying different microservices. Monitoring and debugging them becomes a difficult job and adds additional cost and complexity.
 
-Modular monolith, as the name suggests is a collection of modules, a set of loosely coupled, well encapsulated modular components with well-defined interfaces. We don’t have to deploy a module as a service until we need to scale it. Modules can be deployed as libraries, plugins etc., resulting into one file that can be very easily deployed, monitored and debugged. As long as we follow a good modular structure inside the monolith, we can easily extract a service.
+The other biggest challenge while designing microservice is identifying the boundaries, right set of bounded context. Even experienced architects with good domain knowledge have difficulty in identifying boundaries at the beginning. Choosing microservice boundaries is an architecturally significant decision with costly ramifications when done wrong. Where as Module boundaries in a modular application are easier to change. Refactoring across modules is typically supported by the type-system and the compiler. Modular monolith helps you figure out the right set of boundaries and acts as a gateway towards microservice architecture.
+
+Modular monolith, as the name suggests is a collection of modules, a set of loosely coupled, well encapsulated modular components with well-defined interfaces. Each module has one responsibility. The domain is distributed across different modules handling specific business functionality.
+
+In modular applications, code is organized independently and can be easily swapped in or out. You have more control of your codebase. Spread out distribution of code allows for better maintainability in the long run. You can adopt different frameworks for different modules as per your needs.
+
+```When you choose a framework, you make a large, long term commitment. You sign up to learn about the framework’s various inner workings and strange behaviors. You also sign up to a period of ineffectiveness whilst you’re getting to grips with things. If the framework turns out to be the wrong bet, you lose a lot. But if you pick and choose from libraries, you can afford to replace one part of your front end stack whilst retaining the rest. — Jimmy Breck-McKye, The State of JavaScript in 2015```
+
+Similarly, while working with modular monolith if you want to improve piece of code it can be easily done without breaking other modules. If you want to try out different frameworks that can be done easily.
+
+As compared to microservices, we don’t have to deploy a module as a service until we need to scale it. Modules can be deployed as libraries, plugins etc., resulting into one file that can be very easily deployed, monitored and debugged. As long as we follow a good modular structure inside the monolith, we can easily extract a service.
+
+The typical downside of modular monolith is that it requires discipline from developers. It's very easy to use classes and methods of different modules that are not the entry points to the module, so discipline of using only the entry point to module is required.
+  
 
 --------------
 
